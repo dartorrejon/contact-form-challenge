@@ -17,6 +17,10 @@
   --grey-500-medium: hsl(186, 15%, 59%);
   --grey-900-darker: hsl(187, 24%, 22%);
 
+  /* Generals */
+  --input-height: 35px;
+  --gral-radius: 7px;
+
   font-family: 'Karla';
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +42,7 @@ body {
   display: grid;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 
@@ -59,6 +63,50 @@ main > h1 {
   margin-bottom: 10px;
   font-size: 1.4em;
 }
+
+.names-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  
+}
+.first-name-container > label, .last-name-container > label{
+  display: flex;
+align-items: baseline;
+height: 30px;
+}
+#form-first-name, #form-last-name{
+  width: 100%;
+  height: var(--input-height);
+  border-radius: var(--gral-radius);
+}
+.form-email-container{
+  display: flex;
+  flex-direction: column;
+}
+#form-email{
+  height: var(--input-height);
+  border-radius: var(--gral-radius);
+}
+.form-ratios-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+
+.form-ratios-container > label {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+.form-message-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-message-container > label{
+  width: 100%;
+}
+
 .contact-form{
   width: 100%;
   display: flex;
@@ -66,16 +114,28 @@ main > h1 {
   row-gap: 20px;
 }
 
+.form-consent-container{
+  display: flex;
+}
+
+quote{
+  padding-left: 15px;
+}
 .asterisk{
   color: var(--green-600-medium);
 }
 
 #form-message{
+  width: 100%;
   resize: none;
 }
+
 [value=Submit]{
   display: block;
   width: 100%;
   background-color: var(--green-600-medium);
   color: var(--white);
+  height: 40px;
+  border-radius: 5px;
+  border: none;
 }

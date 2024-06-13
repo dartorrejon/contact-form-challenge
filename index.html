@@ -11,13 +11,12 @@
     <main>
       <h1>Contact Us</h1>
       <form action="#" class="contact-form">
-
-        <div class="names-container">
+        <section class="names-container">
           <div class="first-name-container">
-            <label for="form-name">
+            <label for="form-first-name">
             First Name <span class="asterisk">*</span>
             </label>
-            <input type="text" id="form-name" name="form-name">
+            <input type="text" id="form-first-name" name="form-first-name">
           </div>
           <div class="last-name-container">
             <label for="form-last-name">
@@ -25,29 +24,31 @@
             </label>
             <input type="text" id="form-last-name" name="form-last-name">
           </div>
-        </div>
+        </section>
 
-        <div class="form-email-container">
+        <section class="form-email-container">
           <label for="form-email">Email <span class="asterisk">*</span></label>
           <input type="email" id="form-email" name="form-email">
-        </div>
+        </section>
 
-        <div class="form-query-container">
+        <section class="form-query-container">
           <h4>Query Type <span class="asterisk">*</span></h4>
-          <label>
-            <input type="radio" id="form-enquiry" name="form-query">
-            General Enquiry</label>
-            <label><input type="radio" id="form-support" name="form-query">
-          Support Request</label>
-        </div>
+          <div class="form-ratios-container">
+            <label>
+              <input type="radio" id="form-enquiry" name="form-query">
+              General Enquiry</label>
+              <label><input type="radio" id="form-support" name="form-query">
+                Support Request</label>
+          </div>
+        </section>
 
-        <div class="form-message-container">
+        <section class="form-message-container">
           <label for="form-message">Message <span class="asterisk">*</span></label>
           <textarea name="form-message" id="form-message" cols="30" rows="10"></textarea>
-        </div>
+        </section>
 
-        <label>
-          <input id="form-consent" name="form-consent" type="checkbox">I consent to being contacted by the team <span class="asterisk">*</span>
+        <label class="form-consent-container">
+          <input id="form-consent" name="form-consent" type="checkbox"><quote>I consent to being contacted by the team <span class="asterisk">*</span></quote>
         </label>
         
         <input type="submit" value="Submit">

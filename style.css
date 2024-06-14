@@ -21,11 +21,12 @@
   --input-height: 35px;
   --gral-radius: 7px;
 
+  accent-color: var(--green-600-medium);
+
   font-family: 'Karla';
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -68,25 +69,35 @@ main > h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  
 }
-.first-name-container > label, .last-name-container > label{
+.first-name-container, .last-name-container{
   display: flex;
-align-items: baseline;
-height: 30px;
+  flex-direction: column;
+  gap: 12px;
 }
+/* .first-name-container > label, .last-name-container > label{
+  height: 30px;
+} */
 #form-first-name, #form-last-name{
   width: 100%;
   height: var(--input-height);
   border-radius: var(--gral-radius);
+  border: 1px solid var(--grey-500-medium);
 }
 .form-email-container{
   display: flex;
+  gap: 12px;
   flex-direction: column;
 }
 #form-email{
   height: var(--input-height);
   border-radius: var(--gral-radius);
+  border: 1px solid var(--grey-500-medium);
+}
+.form-query-container{
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
 .form-ratios-container{
   display: grid;
@@ -95,16 +106,25 @@ height: 30px;
 }
 
 .form-ratios-container > label {
-  border: 1px solid black;
+  border: 1px solid var(--grey-500-medium);
   padding: 10px 20px;
+  border-radius: var(--gral-radius);
 }
-
+.form-ratios-container > label:focus-within{
+  background-color: var(--green-200-lighter);
+  outline: 1px solid var(--green-600-medium);
+}
 .form-message-container{
   display: flex;
+  gap: 12px;
   flex-wrap: wrap;
 }
 .form-message-container > label{
   width: 100%;
+}
+.form-message-container > textarea{
+  border-radius: var(--gral-radius);
+  border: 1px solid var(--grey-500-medium);
 }
 
 .contact-form{
@@ -138,4 +158,9 @@ quote{
   height: 40px;
   border-radius: 5px;
   border: none;
+  margin-top: 12px;
+}
+input:focus, textarea:focus{
+  background-color: var(--green-200-lighter);
+  outline: 1px solid var(--green-600-medium);
 }
